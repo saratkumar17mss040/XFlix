@@ -1,0 +1,12 @@
+import './SearchBar.css';
+
+export default function SearchBar({}) {
+	return (
+		<div className="search-bar-wrapper">
+			<input className="search-input" type="search" placeholder="Search" />
+			<div className="icon">
+				<i className="fa fa-search" aria-hidden="true"></i>
+			</div>
+		</div>
+	);
+}
