@@ -149,3 +149,21 @@ input[type="date"]:valid::before {
     background: rgb(76, 76, 76);
     font-size: 1rem;
 }
+
+@media (max-width: 55em) {
+    .modal-content {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 45em) {
+    .modal-content {
+        transform: scale(0.79);
+    }
+}
+
+@media (max-width: 20em) {
+    .modal-content {
+        transform: scale(0.69);
+    }
+}

@@ -15,7 +15,13 @@
     /* width: 100px; */
     /* height: 150px; */
     align-self: center;
+    cursor: pointer;
     /* background-color: white; */
+}
+
+.dashboard-grid-item:hover {
+    transform: scale(1.07);
+    transition: transform 500ms;
 }
 
 .video-card {
@@ -39,6 +45,29 @@
 .video-time {
     color: lightgray;
     text-align: left;
+}
+
+.loader {
+    text-align: center;
+}
+
+.loader-spinner {
+    font-size: 3rem;
+    color: red;
+    margin-top: 10%;
+}
+
+.error {
+    color: red;
+    font-size: 1.5rem;
+    margin-top: 10%;
+}
+
+.no-search-txt {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center !important;
+    margin-top: 10%;
 }
 
 @media (max-width: 35em) {

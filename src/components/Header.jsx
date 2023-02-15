@@ -5,7 +5,7 @@ import UploadVideoModal from './UploadVideoModal';
 import XFlixLogo from './XFlixLogo.svg';
 import ProfilePhoto from './ProfilePhoto.svg';
 
-export default function Header({}) {
+export default function Header({ setSearch }) {
 	const [isModalShown, setToggleModal] = useState(false);
 
 	const toggleModal = () => {
@@ -17,7 +17,7 @@ export default function Header({}) {
 			<div className="header-logo">
 				<img src={XFlixLogo} alt="XFlixLogo" />
 			</div>
-			<SearchBar />
+			<SearchBar setSearch={setSearch} />
 			{/* <div className="upload-btn-wrapper"> */}
 			{/* </div> */}
 			{/* <div className="header-avatar"> */}
