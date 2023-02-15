@@ -23,17 +23,15 @@ export default function GenrePanel({ setUrl }) {
 	});
 
 	function setVideoParameterOnUrl(event) {
-		console.log(event.target.value);
 		setUrl(
-			`https://amock.io/api/Sarath/v1/videos?sortBy=${event.target.value}`
+			`${process.env.REACT_APP_XFLIX_BACKEND_BASE_URL}?sortBy=${event.target.value}`
 		);
 	}
 
 	useEffect(() => {
-		console.log('called age');
 		if (notInitialRender.current) {
 			if (agePillsObj['All Age']) {
-				setUrl('https://amock.io/api/Sarath/v1/videos');
+				setUrl(process.env.REACT_APP_XFLIX_BACKEND_BASE_URL);
 				return;
 			}
 			let biggestAgeInSelectedAgePills = 0;
@@ -45,16 +43,14 @@ export default function GenrePanel({ setUrl }) {
 					biggestAgeInSelectedAgePills = parseInt(ageProps);
 				}
 			}
-			console.log(biggestAgeInSelectedAgePills);
 			const encodedAgeUrlValue = encodeURIComponent(
 				`${biggestAgeInSelectedAgePills}+`
 			);
-			console.log(encodedAgeUrlValue);
 			if (encodedAgeUrlValue.includes('0')) {
 				return;
 			}
 			setUrl(
-				`https://amock.io/api/Sarath/v1/videos?contentRating=${encodedAgeUrlValue}`
+				`${process.env.REACT_APP_XFLIX_BACKEND_BASE_URL}?contentRating=${encodedAgeUrlValue}`
 			);
 		} else {
 			notInitialRender.current = true;
@@ -62,23 +58,22 @@ export default function GenrePanel({ setUrl }) {
 	}, [agePillsObj, setUrl]);
 
 	useEffect(() => {
-		console.log('called genre');
 		let genres = '';
 		if (genreObj['All Genre']) {
-			setUrl('https://amock.io/api/Sarath/v1/videos?genres=All');
+			setUrl(`${process.env.REACT_APP_XFLIX_BACKEND_BASE_URL}?genres=All`);
 			return;
 		}
 		for (const genreProps in genreObj) {
-			console.log(genreProps, genreObj[genreProps]);
 			if (genreObj[genreProps]) {
 				genres += genreProps + ',';
 			}
 		}
 		genres = genres?.slice(0, genres.length - 1);
 		if (genres !== undefined && genres.length > 0) {
-			console.log("called set");
-			setUrl(`https://amock.io/api/Sarath/v1/videos?genres=${genres}`);
-		}	
+			setUrl(
+				`${process.env.REACT_APP_XFLIX_BACKEND_BASE_URL}?genres=${genres}`
+			);
+		}
 	}, [genreObj, setUrl]);
 
 	function handleGenrePillSelction(event) {

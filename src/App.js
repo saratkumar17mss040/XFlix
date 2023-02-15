@@ -5,11 +5,9 @@ import VideoPage from './pages/VideoPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
-	console.log('App renders');
-	const url = 'https://amock.io/api/Sarath/v1/videos';
-	const { data, loading, error } = useFetch(url);
-	console.log(data);
-
+	const { data, loading, error } = useFetch(
+		process.env.REACT_APP_XFLIX_BACKEND_BASE_URL
+	);
 	return (
 		<div className="App">
 			<Router>

@@ -62,7 +62,6 @@ export default function UploadVideoModal({ isModalShown, closeModal }) {
 	}
 
 	function submitFormData(event) {
-		console.log('from');
 		event.preventDefault();
 		const isFormValid = validateFormData();
 		if (isFormValid) {
@@ -82,9 +81,8 @@ export default function UploadVideoModal({ isModalShown, closeModal }) {
 				releaseDate: dayjs(videoFormData.releaseDate).format('DD MMM YYYY'),
 			};
 			axios
-				.post('https://amock.io/api/v1/videos', payload)
+				.post(process.env.REACT_APP_XFLIX_BACKEND_BASE_URL, payload)
 				.then((res) => {
-					console.log(res.data);
 					alert('Video posted successfully');
 					closeModal();
 				})
@@ -112,7 +110,21 @@ export default function UploadVideoModal({ isModalShown, closeModal }) {
 			>
 				<div className="modal-title">
 					<div>Upload Video</div>
-					<div onClick={closeModal} className="close-icon-wrapper">
+					<div
+						onClick={() => {
+							setVideoFormData({
+								videoLink: '',
+								title: '',
+								previewImage: '',
+								contentRating: '',
+								releaseDate: '',
+								ageDropdown: '',
+								genreDropdown: '',
+							});
+							closeModal();
+						}}
+						className="close-icon-wrapper"
+					>
 						<i className="fa fa-times" aria-hidden="true"></i>
 					</div>
 				</div>

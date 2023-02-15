@@ -53,9 +53,12 @@ export default function VideoPage({ data, loading, error }) {
 				change: 'decrease',
 			};
 		}
+
+		// mock for patch was not working on amock service.
+		// so, i used localhost mock using mockoon tool
 		axios
 			.patch(
-				'http://localhost:3001/Sarath/v1/videos/60331f421f1d093ab5424489/votes',
+				`${process.env.REACT_APP_XFLIX_BACKEND_LOCAL_PATCH_URL}/votes`,
 				votePayload
 			)
 			.then((res) => {

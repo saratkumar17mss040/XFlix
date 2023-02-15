@@ -7,12 +7,13 @@ import PillSelectionPopupMsg from '../components/PillSelectionPopup';
 
 export default function LandingPage() {
 	const [searchData, setSearchData] = useState('');
-	const [url, setUrlData] = useState('https://amock.io/api/Sarath/v1/videos');
+	const [url, setUrlData] = useState(
+		process.env.REACT_APP_XFLIX_BACKEND_BASE_URL
+	);
 	const { data, loading, error } = useFetch(url);
 	const [isPopupShown, setPopUpData] = useState(false);
 
 	const localStoragePopupMsg = localStorage.getItem('pillSelectionPopupMsg');
-	console.log(localStoragePopupMsg);
 
 	if (localStoragePopupMsg === null) {
 		localStorage.setItem(
