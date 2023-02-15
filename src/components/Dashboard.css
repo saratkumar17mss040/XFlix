@@ -1,22 +1,16 @@
 .dashboard-grid {
     display: grid;
     justify-content: center;
-    /* margin-left: 2rem; */
     gap: 2rem;
-    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 2rem;
     margin-left: 2rem;
     margin-right: 2rem;
-    /* grid-auto-flow: column; */
 }
 
 .dashboard-grid-item {
-    /* width: 100px; */
-    /* height: 150px; */
     align-self: center;
     cursor: pointer;
-    /* background-color: white; */
 }
 
 .dashboard-grid-item:hover {
@@ -38,12 +32,12 @@
 }
 
 .video-title {
-    color: white;
+    color: var(--clr-white);
     text-align: left;
 }
 
 .video-time {
-    color: lightgray;
+    color: var(--clr-light-gray);
     text-align: left;
 }
 
@@ -53,18 +47,19 @@
 
 .loader-spinner {
     font-size: 3rem;
-    color: red;
+    color: var(--clr-red);
     margin-top: 10%;
 }
 
 .error {
-    color: red;
+    color: var(--clr-red);
     font-size: 1.5rem;
     margin-top: 10%;
+    text-align: center;
 }
 
 .no-search-txt {
-    color: white;
+    color: var(--clr-white);
     font-size: 1.5rem;
     text-align: center !important;
     margin-top: 10%;
@@ -83,7 +78,6 @@
         grid-template-columns: 1fr 1fr;
     }
 }
-
 
 @media (max-width: 20em) {
 

@@ -11,8 +11,6 @@ iframe {
     width: 80%;
     height: 60vh;
     margin-top: 1rem;
-    /* margin-left: 2rem;
-    margin-right: 2rem; */
 }
 
 .dashboard-wrapper {
@@ -37,7 +35,7 @@ iframe a[title='Watch on youtube.com'] {
     width: 80%;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    color: white;
+    color: var(--clr-white);
 }
 
 .main-video-title {
@@ -50,13 +48,13 @@ iframe a[title='Watch on youtube.com'] {
     display: inline-block;
     width: 0.5rem;
     height: 0.5rem;
-    background-color: lightgray;
+    background-color: var(--clr-light-gray);
     border-radius: 50%;
 }
 
 .video-stats {
     width: max-content;
-    color: lightgrey;
+    color: var(--clr-light-gray);
 }
 
 .video-time-period {}
@@ -78,12 +76,12 @@ iframe a[title='Watch on youtube.com'] {
 
 .btn-like {
     margin-right: 1rem;
-    color: white;
-    background-color: skyblue;
+    color: var(--clr-white);
+    background-color: var(--clr-sky-blue);
 }
 
 .hr-line-after-main-video {
-    color: lightgray;
+    color: var(--clr-light-gray);
     width: 80%;
 }
 
@@ -96,10 +94,3 @@ iframe a[title='Watch on youtube.com'] {
         margin-top: 1rem;
     }
 }
-
-
-/* 
-.video-img {
-    width: 100%;
-    display: block;
-} */

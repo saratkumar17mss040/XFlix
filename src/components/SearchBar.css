@@ -21,9 +21,9 @@
     min-width: 3rem;
     min-height: 1rem;
     position: absolute;
-    color: white;
+    color: var(--clr-white);
     right: 0;
-    background-color: lightgray;
+    background-color: var(--clr-light-gray);
     top: 0;
     height: 100%;
     cursor: pointer;

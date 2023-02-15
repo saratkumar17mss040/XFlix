@@ -18,15 +18,11 @@ export default function Header({ setSearch }) {
 				<img src={XFlixLogo} alt="XFlixLogo" />
 			</div>
 			<SearchBar setSearch={setSearch} />
-			{/* <div className="upload-btn-wrapper"> */}
-			{/* </div> */}
-			{/* <div className="header-avatar"> */}
 			<button onClick={toggleModal} className="header-btn btn-upload">
 				<i className="fa fa-upload upload-icon" aria-hidden="true"></i>
 				&nbsp; Upload
 			</button>
 			<img className="header-profile-img" src={ProfilePhoto} alt="profile" />
-			{/* </div> */}
 			<UploadVideoModal
 				isModalShown={isModalShown}
 				closeModal={() => {

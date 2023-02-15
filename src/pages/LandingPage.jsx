@@ -12,7 +12,6 @@ export default function LandingPage() {
 	const [isPopupShown, setPopUpData] = useState(false);
 
 	const localStoragePopupMsg = localStorage.getItem('pillSelectionPopupMsg');
-	// if(localStoragePopupMsg)
 	console.log(localStoragePopupMsg);
 
 	if (localStoragePopupMsg === null) {
@@ -31,10 +30,12 @@ export default function LandingPage() {
 		setUrlData(url);
 	};
 
-
 	return (
 		<>
-			<PillSelectionPopupMsg isPopupShown={isPopupShown} setPopUpData={setPopUpData} />
+			<PillSelectionPopupMsg
+				isPopupShown={isPopupShown}
+				setPopUpData={setPopUpData}
+			/>
 			<Header setSearch={setSearch} />
 			<GenrePanel setUrl={setUrl} />
 			<Dashboard

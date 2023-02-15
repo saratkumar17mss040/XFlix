@@ -204,9 +204,6 @@ export default function UploadVideoModal({ isModalShown, closeModal }) {
 						</button>
 					</div>
 				</form>
-				{/* <input type="date" placeholder="Choose date" value="" onChange="this.setAttribute('value', this.value)" /> */}
-				{/* <input type="date" placeholder="Release Date" onChange="this.setAttribute('value', this.value)" /> */}
-				{/* <input type="text" value="Release date" placeholder="Release date" onfocus="(this.type='date')" onblur="(this.type='text')"  /> */}
 			</div>
 		</div>
 	) : null;

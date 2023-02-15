@@ -1,42 +1,13 @@
 export default function RenderGenrePills({ genreObj }) {
-	return (
-		<>
+	return Object.entries(genreObj).map((genreArr) => {
+		return (
 			<div
-				className={`genre-pill ${
-					genreObj['All Genre'] ? 'genre-pill-selected' : ''
-				}`}
-				data-value="All Genre"
+				className={`genre-pill ${genreArr[1] ? 'genre-pill-selected' : ''}`}
+				data-value={genreArr[0]}
+				key={genreArr[0]}
 			>
-				All Genre
+				{genreArr[0]}
 			</div>
-			<div
-				className={`genre-pill ${
-					genreObj.Education ? 'genre-pill-selected' : ''
-				}`}
-				data-value="Education"
-			>
-				Education
-			</div>
-			<div
-				className={`genre-pill ${genreObj.Sports ? 'genre-pill-selected' : ''}`}
-				data-value="Sports"
-			>
-				Sports
-			</div>
-			<div
-				className={`genre-pill ${genreObj.Comedy ? 'genre-pill-selected' : ''}`}
-				data-value="Comedy"
-			>
-				Comedy
-			</div>
-			<div
-				className={`genre-pill ${
-					genreObj.LifeStyle ? 'genre-pill-selected' : ''
-				}`}
-				data-value="LifeStyle"
-			>
-				LifeStyle
-			</div>
-		</>
-	);
+		);
+	});
 }

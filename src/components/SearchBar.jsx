@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './SearchBar.css';
 
 export default function SearchBar({ setSearch }) {

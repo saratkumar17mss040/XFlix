@@ -3,7 +3,6 @@
     justify-content: center;
     column-gap: 0.5rem;
     margin-top: 2rem;
-    /* margin: 0 auto; */
 }
 
 .age-panel-flex-container {
@@ -15,54 +14,47 @@
 
 .genre-pill {
     min-width: 1rem;
-    /* background-color: white; */
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    color: white;
+    color: var(--clr-white);
     cursor: pointer;
 }
 
 .age-pill {
-    min-width: 3.5rem;
-    /* background-color: white; */
+    min-width: 2.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    color: white;
+    color: var(--clr-white);
     cursor: pointer;
 }
 
 .genre-pill:hover {
-    background-color: white;
-    color: lightgray;
+    background-color: var(--clr-white);
+    color: var(--clr-light-gray);
     border-radius: 1rem;
 }
 
 .genre-pill-selected {
-    background-color: white;
-    color: lightgray;
+    background-color: var(--clr-white);
+    color: var(--clr-light-gray);
     border-radius: 1rem;
 }
 
 .age-pill-selected {
-    background-color: white;
-    color: lightgray;
+    background-color: var(--clr-white);
+    color: var(--clr-light-gray);
     border-radius: 1rem;
 }
 
 .age-pill:hover {
-    background-color: white;
-    color: lightgray;
+    background-color: var(--clr-white);
+    color: var(--clr-light-gray);
     border-radius: 1rem;
 }
-
-/* .upload-icon {
-   position: absolute;
-   top: 5px;
-} */
 
 .arrow-icon-wrapper {
     position: relative;
@@ -79,8 +71,8 @@
 
 #sortBySelect option {
     font-size: 1rem;
-    color: white;
-    background-color: lightgray;
+    color: var(--clr-white);
+    background-color: var(--clr-light-gray);
 }
 
 #sortBySelect option::before {

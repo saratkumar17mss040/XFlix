@@ -15,10 +15,6 @@ export default function RenderVideoStats({ loading, error, data, searchData }) {
 			</div>
 		);
 	} else if (data?.videos) {
-		return (
-			// <div className="dashboard-grid">
-			<RenderGridItems data={data} searchData={searchData} />
-			// </div>
-		);
+		return <RenderGridItems data={data} searchData={searchData} />;
 	}
 }

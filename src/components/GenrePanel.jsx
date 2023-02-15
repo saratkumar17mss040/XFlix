@@ -101,22 +101,9 @@ export default function GenrePanel({ setUrl }) {
 	}
 
 	function handleAgePillSelection(event) {
-		// if (event.target.dataset.value === 'All Age') {
-		// 	setAgePillsObj({
-		// 		...agePillsObj,
-		// 		'All Age': !agePillsObj['All Age'],
-		// 		7: false,
-		// 		12: false,
-		// 		16: false,
-		// 		18: false,
-		// 	});
-		// } else {
-		// 	setAgePillsObj({
-		// 		...agePillsObj,
-		// 		'All Age': false,
-		// 		[event.target.dataset.value]: !agePillsObj[event.target.dataset.value],
-		// 	});
-		// }
+		if (event.target.dataset.value === undefined) {
+			return;
+		}
 		setAgePillsObj({
 			'All Age': false,
 			7: false,
