@@ -18,7 +18,7 @@ export default function LandingPage() {
 	if (localStoragePopupMsg === null) {
 		localStorage.setItem(
 			'pillSelectionPopupMsg',
-			'Please select either genre selection or age selection as the XFlix API supports only one at a time.If you select both the data wont accurate.'
+			`Please select either genre selection or age selection as the XFlix API supports only one at a time. \n If you select both, the data won't be accurate.\n Note: In order to uncheck the selected filter selection - age and genre, you need to click again on the selected genre and age filters.`
 		);
 		setPopUpData(true);
 	}
