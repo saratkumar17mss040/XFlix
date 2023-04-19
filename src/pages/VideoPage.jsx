@@ -17,7 +17,7 @@ export default function VideoPage({ data, loading, error }) {
 	if (data === null) {
 		data = JSON.parse(localStorage.getItem('videoData'));
 	}
-	const currentVideoData = data?.videos.filter(
+	const currentVideoData = data.filter(
 		(video) => video['_id'] === videoId
 	);
 	const { videoLink, title, releaseDate, contentRating, votes } =
@@ -58,7 +58,7 @@ export default function VideoPage({ data, loading, error }) {
 		// so, i used localhost mock using mockoon tool
 		axios
 			.patch(
-				`${process.env.REACT_APP_XFLIX_BACKEND_LOCAL_PATCH_URL}/votes`,
+				`${process.env.REACT_APP_XFLIX_BACKEND_BASE_URL}/${videoId}/votes`,
 				votePayload
 			)
 			.then((res) => {

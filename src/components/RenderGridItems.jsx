@@ -9,10 +9,10 @@ export default function RenderGridItems({ data, searchData }) {
 
 	function filterGirdItems(data, searchData) {
 		if (searchData.length === 0) {
-			return data.videos;
+			return data;
 		} else {
 			const actualSearchDataInLowerCase = searchData.toLowerCase();
-			return data?.videos.filter((video) => {
+			return data.filter((video) => {
 				const currVideoTitleInLowerCase = video.title.toLowerCase();
 				if (currVideoTitleInLowerCase.includes(actualSearchDataInLowerCase)) {
 					return video;

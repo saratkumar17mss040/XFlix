@@ -14,7 +14,7 @@ export default function RenderVideoStats({ loading, error, data, searchData }) {
 				<span> Something went wrong :(</span>
 			</div>
 		);
-	} else if (data?.videos) {
+	} else if (data) {
 		return <RenderGridItems data={data} searchData={searchData} />;
 	}
 }
